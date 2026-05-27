@@ -5,7 +5,6 @@ import sys
 from datetime import datetime
 
 # Constants
-# When running as a script, we assume current working directory is the repo root
 RAW_PRIVACY_JSON = "data/privacy_raw.json"
 BLOCKLISTS_HTML = "data/blocklists.html"
 SERVICES_HTML = "data/websiteapporgame.html"
@@ -27,24 +26,27 @@ BASE_HEADERS = [
 
 def fetch_url(url, output_file):
     print(f"Fetching {url}...")
-    cmd = ['curl', '-L', url] + BASE_HEADERS
+    cmd = ['curl', '-L', '-s', url] + BASE_HEADERS
     try:
         result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+        content = result.stdout
+        
+        # Check for SPA shell or auth error
+        if '<div id="root"></div>' in content or 'authRequired' in content:
+            print(f"Warning: Fetch for {url} returned SPA shell or Auth error. Preservation mode active.")
+            return False
+            
         os.makedirs(os.path.dirname(output_file), exist_ok=True)
         with open(output_file, 'w') as f:
-            f.write(result.stdout)
+            f.write(content)
         return True
     except Exception as e:
         print(f"Error fetching {url}: {e}")
         return False
 
 def sync():
-    # Identify repo root (handle being run from scripts/ dir or repo root)
-    if os.path.exists('scripts/sync_metadata.py'):
-        root = '.'
-    else:
-        root = '..'
-        os.chdir(root)
+    if os.path.exists('scripts/sync_metadata.py'): root = '.'
+    else: root = '..'; os.chdir(root)
 
     # 1. Fetch JSON (The actual API state)
     fetch_url('https://api.nextdns.io/profiles/889455/privacy', RAW_PRIVACY_JSON)

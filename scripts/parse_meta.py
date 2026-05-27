@@ -13,13 +13,10 @@ def parse_relative_date(date_str):
 
 def parse_blocklists():
     html_path = 'data/blocklists.html'
-    if not os.path.exists(html_path) or os.path.getsize(html_path) < 1000:
-        # Fallback to extension source if available
-        html_path = '../../.source/blocklists.html'
-    
     if not os.path.exists(html_path): return []
     with open(html_path, 'r') as f: content = f.read()
     
+    # Match the specific modal list item structure
     items = re.findall(r'style="font-weight: 500;">(.*?)</div>.*?style="font-size: 0.9em; opacity: 0.5;">(.*?)</div>.*?style="opacity: 0.4;">(.*?) entries</span>.*?style="opacity: 0.4;">Updated (.*?)</span>', content, re.DOTALL)
     
     if not items:
@@ -46,9 +43,6 @@ def parse_blocklists():
 
 def parse_services():
     html_path = 'data/websiteapporgame.html'
-    if not os.path.exists(html_path) or os.path.getsize(html_path) < 1000:
-        html_path = '../../.source/websiteapporgame.html'
-        
     if not os.path.exists(html_path): return []
     with open(html_path, 'r') as f: content = f.read()
     items = re.findall(r'notranslate".*?500;">(.*?)</span>', content)
@@ -66,19 +60,10 @@ def parse_services():
 
 def parse_tlds():
     html_path = 'data/tlds.html'
-    if not os.path.exists(html_path) or os.path.getsize(html_path) < 1000:
-        html_path = '../../.source/tlds.html'
-        
     if not os.path.exists(html_path): return []
     with open(html_path, 'r') as f: content = f.read()
     raw_tlds = re.findall(r'notranslate".*?>\.(.*?)</span>', content)
-    
-    # Filter for ASCII-only TLDs as requested by user
-    filtered = []
-    for tld in set(raw_tlds):
-        if re.match(r'^[a-zA-Z0-9.-]+$', tld):
-            filtered.append(tld)
-    
+    filtered = [tld for tld in set(raw_tlds) if re.match(r'^[a-zA-Z0-9.-]+$', tld)]
     return sorted(filtered)
 
 def save_json(data, filename):
@@ -87,6 +72,7 @@ def save_json(data, filename):
         json.dump(data, f, indent=2)
 
 def main():
+    print("Starting metadata parse...")
     blocklists = parse_blocklists()
     services = parse_services()
     tlds = parse_tlds()
@@ -111,7 +97,6 @@ def main():
         "files": ["blocklists.json", "parental_services.json", "tlds.json", "categories.json"]
     }
     save_json(index, 'blocks_meta.json')
-    
     print(f"Meta updated and split: {len(blocklists)} blocklists, {len(services)} services, {len(tlds)} ASCII TLDs.")
 
 if __name__ == "__main__":

@@ -1,0 +1,9 @@
+{
+  "last_updated": "2026-05-27T16:31:58.489616",
+  "files": [
+    "blocklists.json",
+    "parental_services.json",
+    "tlds.json",
+    "categories.json"
+  ]
+}
