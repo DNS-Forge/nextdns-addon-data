@@ -13,14 +13,16 @@ def parse_relative_date(date_str):
 
 def parse_blocklists():
     html_path = 'data/blocklists.html'
+    if not os.path.exists(html_path) or os.path.getsize(html_path) < 1000:
+        # Fallback to extension source if available
+        html_path = '../../.source/blocklists.html'
+    
     if not os.path.exists(html_path): return []
     with open(html_path, 'r') as f: content = f.read()
     
-    # Improved regex to handle potential formatting variations in live HTML
     items = re.findall(r'style="font-weight: 500;">(.*?)</div>.*?style="font-size: 0.9em; opacity: 0.5;">(.*?)</div>.*?style="opacity: 0.4;">(.*?) entries</span>.*?style="opacity: 0.4;">Updated (.*?)</span>', content, re.DOTALL)
     
     if not items:
-        # Try a more relaxed match for the entry count/updated pattern
         items = re.findall(r'notranslate".*?500;">(.*?)</div>.*?0.5;">(.*?)</div>.*?0.4;">(.*?) entries</span>.*?0.4;">Updated (.*?)</span>', content, re.DOTALL)
 
     blocks = []
@@ -44,6 +46,9 @@ def parse_blocklists():
 
 def parse_services():
     html_path = 'data/websiteapporgame.html'
+    if not os.path.exists(html_path) or os.path.getsize(html_path) < 1000:
+        html_path = '../../.source/websiteapporgame.html'
+        
     if not os.path.exists(html_path): return []
     with open(html_path, 'r') as f: content = f.read()
     items = re.findall(r'notranslate".*?500;">(.*?)</span>', content)
@@ -59,35 +64,55 @@ def parse_services():
         services.append({"id": id_, "name": name})
     return services
 
-def main():
-    meta = {
-        "blocklists": parse_blocklists(),
-        "parental_services": parse_services(),
-        "tlds": [], # TLDs often require a different parse strategy if in a long list
-        "categories": [
-            {"id": "porn", "name": "Porn", "description": "Blocks adult and pornographic content."},
-            {"id": "gambling", "name": "Gambling", "description": "Blocks gambling content."},
-            {"id": "dating", "name": "Dating", "description": "Blocks all dating websites & apps."},
-            {"id": "piracy", "name": "Piracy", "description": "Blocks P2P websites, protocols, etc."},
-            {"id": "social-networks", "name": "Social Networks", "description": "Blocks all social networks sites and apps."},
-            {"id": "gaming", "name": "Online Gaming", "description": "Blocks online gaming websites and networks."},
-            {"id": "video-streaming", "name": "Video Streaming", "description": "Blocks video streaming services."}
-        ],
-        "last_updated": datetime.now().isoformat()
-    }
+def parse_tlds():
+    html_path = 'data/tlds.html'
+    if not os.path.exists(html_path) or os.path.getsize(html_path) < 1000:
+        html_path = '../../.source/tlds.html'
+        
+    if not os.path.exists(html_path): return []
+    with open(html_path, 'r') as f: content = f.read()
+    raw_tlds = re.findall(r'notranslate".*?>\.(.*?)</span>', content)
     
-    # Load existing meta to preserve data if new parse finds nothing
-    if os.path.exists('data/blocks_meta.json'):
-        with open('data/blocks_meta.json', 'r') as f:
-            old = json.load(f)
-            if not meta["blocklists"]: meta["blocklists"] = old.get("blocklists", [])
-            if not meta["parental_services"]: meta["parental_services"] = old.get("parental_services", [])
-            meta["tlds"] = old.get("tlds", [])
-            meta["categories"] = old.get("categories", [])
+    # Filter for ASCII-only TLDs as requested by user
+    filtered = []
+    for tld in set(raw_tlds):
+        if re.match(r'^[a-zA-Z0-9.-]+$', tld):
+            filtered.append(tld)
+    
+    return sorted(filtered)
 
-    with open('data/blocks_meta.json', 'w') as f:
-        json.dump(meta, f, indent=2)
-    print(f"Meta updated: {len(meta['blocklists'])} blocklists, {len(meta['parental_services'])} services.")
+def save_json(data, filename):
+    os.makedirs('data', exist_ok=True)
+    with open(f'data/{filename}', 'w') as f:
+        json.dump(data, f, indent=2)
+
+def main():
+    blocklists = parse_blocklists()
+    services = parse_services()
+    tlds = parse_tlds()
+    
+    categories = [
+        {"id": "porn", "name": "Porn", "description": "Blocks adult and pornographic content."},
+        {"id": "gambling", "name": "Gambling", "description": "Blocks gambling content."},
+        {"id": "dating", "name": "Dating", "description": "Blocks all dating websites & apps."},
+        {"id": "piracy", "name": "Piracy", "description": "Blocks P2P websites, protocols, etc."},
+        {"id": "social-networks", "name": "Social Networks", "description": "Blocks all social networks sites and apps."},
+        {"id": "gaming", "name": "Online Gaming", "description": "Blocks online gaming websites and networks."},
+        {"id": "video-streaming", "name": "Video Streaming", "description": "Blocks video streaming services."}
+    ]
+
+    save_json(blocklists, 'blocklists.json')
+    save_json(services, 'parental_services.json')
+    save_json(tlds, 'tlds.json')
+    save_json(categories, 'categories.json')
+    
+    index = {
+        "last_updated": datetime.now().isoformat(),
+        "files": ["blocklists.json", "parental_services.json", "tlds.json", "categories.json"]
+    }
+    save_json(index, 'blocks_meta.json')
+    
+    print(f"Meta updated and split: {len(blocklists)} blocklists, {len(services)} services, {len(tlds)} ASCII TLDs.")
 
 if __name__ == "__main__":
     main()

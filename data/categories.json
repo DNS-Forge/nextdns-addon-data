@@ -1,0 +1,37 @@
+[
+  {
+    "id": "porn",
+    "name": "Porn",
+    "description": "Blocks adult and pornographic content."
+  },
+  {
+    "id": "gambling",
+    "name": "Gambling",
+    "description": "Blocks gambling content."
+  },
+  {
+    "id": "dating",
+    "name": "Dating",
+    "description": "Blocks all dating websites & apps."
+  },
+  {
+    "id": "piracy",
+    "name": "Piracy",
+    "description": "Blocks P2P websites, protocols, etc."
+  },
+  {
+    "id": "social-networks",
+    "name": "Social Networks",
+    "description": "Blocks all social networks sites and apps."
+  },
+  {
+    "id": "gaming",
+    "name": "Online Gaming",
+    "description": "Blocks online gaming websites and networks."
+  },
+  {
+    "id": "video-streaming",
+    "name": "Video Streaming",
+    "description": "Blocks video streaming services."
+  }
+]
