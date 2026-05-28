@@ -16,56 +16,42 @@ def parse_blocklists():
     if not os.path.exists(html_path): return []
     with open(html_path, 'r') as f: content = f.read()
     
-    # Split content into individual list-group-item divs
     items_html = re.split(r'<div[^>]*class="list-group-item"', content)[1:]
     
     blocks = []
     seen = set()
     
     for html in items_html:
-        # Extract Name
         name_match = re.search(r'style="font-weight: 500;">(.*?)</div>', html)
         if not name_match: continue
         name = name_match.group(1).strip()
         if name in seen: continue
         seen.add(name)
 
-        # Extract Description
         desc_match = re.search(r'style="font-size: 0.9em; opacity: 0.5;">(.*?)</div>', html)
         description = desc_match.group(1).strip() if desc_match else ""
 
-        # Extract Website/GitHub link
         link_match = re.search(r'<a target="_blank"[^>]*href="(.*?)"', html)
         website = link_match.group(1).strip() if link_match else ""
 
-        # Extract Entries
         entries_match = re.search(r'style="opacity: 0.4;">(.*?) entries</span>', html)
         entries_text = f"{entries_match.group(1).strip()} entries" if entries_match else "0 entries"
         entry_val = entries_match.group(1).replace(',', '').replace(' ', '') if entries_match else "0"
         entries_count = int(entry_val) if entry_val.isdigit() else 0
 
-        # Extract Updated
         updated_match = re.search(r'style="opacity: 0.4;">Updated (.*?)</span>', html)
         updated_text = f"Updated {updated_match.group(1).strip()}" if updated_match else "Updated unknown"
         updated_ts = parse_relative_date(updated_match.group(1)) if updated_match else datetime.now().timestamp()
 
-        # ID Generation
         id_ = name.lower().replace(' & ', '-').replace(' ', '-').replace('.', '').replace("'", '').replace('(', '').replace(')', '')
         if "nextdns-ads" in id_ and "trackers" in id_: id_ = "nextdns-recommended"
 
         blocks.append({
-            "id": id_,
-            "name": name,
-            "description": description,
-            "website": website,
-            "entries_text": entries_text,
-            "entries": entries_count,
-            "updated_text": updated_text,
-            "updated_ts": updated_ts,
-            "popularity": 0 
+            "id": id_, "name": name, "description": description, "website": website,
+            "entries_text": entries_text, "entries": entries_count, "updated_text": updated_text,
+            "updated_ts": updated_ts, "popularity": 0 
         })
 
-    # Preserve original order for popularity scoring
     for idx, b in enumerate(blocks):
         b["popularity"] = len(blocks) - idx
         
@@ -76,7 +62,6 @@ def parse_services():
     if not os.path.exists(html_path): return []
     with open(html_path, 'r') as f: content = f.read()
     
-    # Improved regex for services to catch all span names
     items = re.findall(r'notranslate"[^>]*style="font-weight: 500;">(.*?)</span>', content)
     seen = set()
     services = []
@@ -85,7 +70,6 @@ def parse_services():
         if name in seen: continue
         seen.add(name)
         id_ = name.lower().replace(' ', '-')
-        # Normalization mapping
         norm = {"Disney+": "disneyplus", "HBO Max": "hbomax", "Prime Video": "primevideo", "Xbox Live": "xboxlive", "PlayStation Network": "playstation-network", "YouTube": "youtube"}
         id_ = norm.get(name, id_)
         services.append({"id": id_, "name": name})
@@ -98,11 +82,6 @@ def parse_tlds():
     raw_tlds = re.findall(r'notranslate"[^>]*>\.(.*?)</span>', content)
     filtered = [tld for tld in set(raw_tlds) if re.match(r'^[a-zA-Z0-9.-]+$', tld)]
     return sorted(filtered)
-
-def save_json(data, filename):
-    os.makedirs('data', exist_ok=True)
-    with open(f'data/{filename}', 'w') as f:
-        json.dump(data, f, indent=2)
 
 def main():
     print("Starting comprehensive metadata parse...")
@@ -120,17 +99,20 @@ def main():
         {"id": "video-streaming", "name": "Video Streaming", "description": "Blocks video streaming services."}
     ]
 
-    save_json(blocklists, 'blocklists.json')
-    save_json(services, 'parental_services.json')
-    save_json(tlds, 'tlds.json')
-    save_json(categories, 'categories.json')
-    
-    index = {
+    # Revert to single JSON payload
+    meta = {
         "last_updated": datetime.now().isoformat(),
-        "files": ["blocklists.json", "parental_services.json", "tlds.json", "categories.json"]
+        "blocklists": blocklists,
+        "parental_services": services,
+        "tlds": tlds,
+        "categories": categories
     }
-    save_json(index, 'blocks_meta.json')
-    print(f"Meta updated: {len(blocklists)} blocklists (with websites), {len(services)} services, {len(tlds)} ASCII TLDs.")
+
+    os.makedirs('data', exist_ok=True)
+    with open('data/blocks_meta.json', 'w') as f:
+        json.dump(meta, f, indent=2)
+        
+    print(f"Meta updated in blocks_meta.json: {len(blocklists)} blocklists, {len(services)} services, {len(tlds)} ASCII TLDs.")
 
 if __name__ == "__main__":
     main()
