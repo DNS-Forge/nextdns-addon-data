@@ -6,21 +6,25 @@ from datetime import datetime
 
 # Constants
 RAW_PRIVACY_JSON = "data/privacy_raw.json"
-BLOCKLISTS_HTML = "data/blocklists.html"
+# We will transition these HTML files to JSON soon
+BLOCKLISTS_HTML = "data/blocklists.html" 
 SERVICES_HTML = "data/websiteapporgame.html"
 TLDS_HTML = "data/tlds.html"
 
-# Use environment variable for cookie
-DEFAULT_COOKIE = 'pst=s%3AYRHOVOLQYXO6dn8Nm7c1Ni8917vM%2FsXzTDjBMZQsdfc%3D.W%2BWZVNJKOsMcdgq8DhgBo8xk2zGEEGP06Rvb%2B0%2Br31M; sid=s%3Aln6mzmzltsAJPOODcnXm3tBAUb29Tcfe.c226pTP7IjE2%2FN%2FJChfR6V%2F2%2FSa9sKnJUaPg41vFF3U'
-COOKIE = os.environ.get('NEXTDNS_COOKIE', DEFAULT_COOKIE)
+# 1. Retrieve the API Key from the environment
+API_KEY = os.environ.get('NEXTDNS_API_KEY')
 
+# Prevent the script from running if the API Key is missing
+if not API_KEY:
+    print("Error: NEXTDNS_API_KEY environment variable is not set.", file=sys.stderr)
+    print("Please set it using: export NEXTDNS_API_KEY='your_api_key_here'", file=sys.stderr)
+    sys.exit(1)
+
+# 2. Update Headers to use X-Api-Key instead of Cookie
 BASE_HEADERS = [
     '-H', 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:151.0) Gecko/20100101 Firefox/151.0',
-    '-H', 'Accept: */*',
-    '-H', 'Accept-Language: en-US,en;q=0.9',
-    '-H', 'Origin: https://my.nextdns.io',
-    '-H', 'Referer: https://my.nextdns.io/',
-    '-H', f'Cookie: {COOKIE}',
+    '-H', 'Accept: application/json', # Explicitly request JSON from the API
+    '-H', f'X-Api-Key: {API_KEY}',    # Official NextDNS API Authentication
     '--compressed'
 ]
 
@@ -31,10 +35,10 @@ def fetch_url(url, output_file):
         result = subprocess.run(cmd, capture_output=True, text=True, check=True)
         content = result.stdout
         
-        # Check for SPA shell or auth error
-        if '<div id="root"></div>' in content or 'authRequired' in content:
-            print(f"Warning: Fetch for {url} returned SPA shell or Auth error. Preservation mode active.")
-            return False
+        # Check for authentication error from the API
+        if '{"errors":' in content and 'unauthorized' in content.lower():
+             print(f"Error: API Key is invalid or unauthorized for {url}.")
+             return False
             
         os.makedirs(os.path.dirname(output_file), exist_ok=True)
         with open(output_file, 'w') as f:
@@ -48,10 +52,9 @@ def sync():
     if os.path.exists('scripts/sync_metadata.py'): root = '.'
     else: root = '..'; os.chdir(root)
 
-    # 1. Fetch JSON (The actual API state)
+    # Note: We are still hitting the HTML dashboard for these three until we map 
+    # out the exact API JSON endpoints for them in the next step.
     fetch_url('https://api.nextdns.io/profiles/889455/privacy', RAW_PRIVACY_JSON)
-    
-    # 2. Fetch HTMLs from the Dashboard
     fetch_url('https://my.nextdns.io/889455/privacy', BLOCKLISTS_HTML)
     fetch_url('https://my.nextdns.io/889455/parentalcontrol', SERVICES_HTML)
     fetch_url('https://my.nextdns.io/889455/security', TLDS_HTML)
