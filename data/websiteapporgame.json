@@ -1,0 +1,176 @@
+{
+  "data": [
+    {
+      "id": "tiktok",
+      "website": "https://www.tiktok.com"
+    },
+    {
+      "id": "tinder",
+      "website": "https://tinder.com"
+    },
+    {
+      "id": "instagram",
+      "website": "https://www.instagram.com"
+    },
+    {
+      "id": "snapchat",
+      "website": "https://www.snapchat.com"
+    },
+    {
+      "id": "facebook",
+      "website": "https://www.facebook.com"
+    },
+    {
+      "id": "twitter",
+      "website": "https://twitter.com"
+    },
+    {
+      "id": "reddit",
+      "website": "https://www.reddit.com"
+    },
+    {
+      "id": "roblox",
+      "website": "https://www.roblox.com"
+    },
+    {
+      "id": "youtube",
+      "website": "https://www.youtube.com"
+    },
+    {
+      "id": "vk",
+      "website": "https://vk.com"
+    },
+    {
+      "id": "tumblr",
+      "website": "https://www.tumblr.com"
+    },
+    {
+      "id": "telegram",
+      "website": "https://telegram.org"
+    },
+    {
+      "id": "9gag",
+      "website": "https://9gag.com"
+    },
+    {
+      "id": "twitch",
+      "website": "https://www.twitch.tv"
+    },
+    {
+      "id": "fortnite",
+      "website": "https://www.epicgames.com/fortnite/home"
+    },
+    {
+      "id": "discord",
+      "website": "https://discordapp.com"
+    },
+    {
+      "id": "leagueoflegends",
+      "website": "https://www.leagueoflegends.com"
+    },
+    {
+      "id": "messenger",
+      "website": "https://www.messenger.com"
+    },
+    {
+      "id": "dailymotion",
+      "website": "https://www.dailymotion.com"
+    },
+    {
+      "id": "bereal",
+      "website": "https://bere.al"
+    },
+    {
+      "id": "pinterest",
+      "website": "https://www.pinterest.com"
+    },
+    {
+      "id": "minecraft",
+      "website": "https://www.minecraft.net"
+    },
+    {
+      "id": "imgur",
+      "website": "https://imgur.com"
+    },
+    {
+      "id": "blizzard",
+      "website": "https://www.blizzard.com"
+    },
+    {
+      "id": "hulu",
+      "website": "https://www.hulu.com"
+    },
+    {
+      "id": "vimeo",
+      "website": "https://vimeo.com"
+    },
+    {
+      "id": "xboxlive",
+      "website": "https://www.xbox.com/live"
+    },
+    {
+      "id": "netflix",
+      "website": "https://www.netflix.com"
+    },
+    {
+      "id": "steam",
+      "website": "https://store.steampowered.com"
+    },
+    {
+      "id": "mastodon",
+      "website": "https://joinmastodon.org"
+    },
+    {
+      "id": "skype",
+      "website": "https://www.skype.com"
+    },
+    {
+      "id": "playstation-network",
+      "website": "https://www.playstation.com/en-us/playstation-network"
+    },
+    {
+      "id": "disneyplus",
+      "website": "https://www.disneyplus.com"
+    },
+    {
+      "id": "primevideo",
+      "website": "https://www.primevideo.com"
+    },
+    {
+      "id": "hbomax",
+      "website": "https://www.hbomax.com"
+    },
+    {
+      "id": "whatsapp",
+      "website": "https://www.whatsapp.com"
+    },
+    {
+      "id": "signal",
+      "website": "https://signal.org"
+    },
+    {
+      "id": "ebay",
+      "website": "https://www.ebay.com"
+    },
+    {
+      "id": "google-chat",
+      "website": "https://chat.google.com"
+    },
+    {
+      "id": "spotify",
+      "website": "https://www.spotify.com"
+    },
+    {
+      "id": "chatgpt",
+      "website": "https://chat.openai.com"
+    },
+    {
+      "id": "amazon",
+      "website": "https://www.amazon.com"
+    },
+    {
+      "id": "zoom",
+      "website": "https://zoom.us"
+    }
+  ]
+}

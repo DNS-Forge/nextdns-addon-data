@@ -1,85 +1,157 @@
-import re
 import json
 import os
+import re
 from datetime import datetime
 
-def parse_relative_date(date_str):
-    now = datetime.now().timestamp()
-    match = re.search(r'(\d+)\s+(day|hour|month|year|minute|second)', date_str)
-    if not match: return now
-    val, unit = int(match.group(1)), match.group(2)
-    multipliers = {'second': 1, 'minute': 60, 'hour': 3600, 'day': 86400, 'month': 2592000, 'year': 31536000}
-    return now - (val * multipliers.get(unit, 0))
+SERVICE_NAMES = {
+    'tiktok': 'TikTok',
+    'tinder': 'Tinder',
+    'instagram': 'Instagram',
+    'snapchat': 'Snapchat',
+    'facebook': 'Facebook',
+    'twitter': 'Twitter',
+    'reddit': 'Reddit',
+    'roblox': 'Roblox',
+    'youtube': 'YouTube',
+    'vk': 'VK',
+    'tumblr': 'Tumblr',
+    '9gag': '9GAG',
+    'telegram': 'Telegram',
+    'twitch': 'Twitch',
+    'fortnite': 'Fortnite',
+    'leagueoflegends': 'League of Legends',
+    'discord': 'Discord',
+    'messenger': 'Messenger',
+    'dailymotion': 'Dailymotion',
+    'bereal': 'BeReal',
+    'pinterest': 'Pinterest',
+    'minecraft': 'Minecraft',
+    'blizzard': 'Blizzard',
+    'imgur': 'Imgur',
+    'hulu': 'Hulu',
+    'xboxlive': 'Xbox Live',
+    'vimeo': 'Vimeo',
+    'netflix': 'Netflix',
+    'steam': 'Steam',
+    'mastodon': 'Mastodon',
+    'skype': 'Skype',
+    'playstation-network': 'PlayStation Network',
+    'disneyplus': 'Disney+',
+    'primevideo': 'Prime Video',
+    'hbomax': 'HBO Max',
+    'whatsapp': 'WhatsApp',
+    'ebay': 'eBay',
+    'signal': 'Signal',
+    'google-chat': 'Google Chat',
+    'spotify': 'Spotify',
+    'chatgpt': 'ChatGPT',
+    'amazon': 'Amazon',
+    'zoom': 'Zoom'
+}
+
+def format_relative_time(ts):
+    diff = datetime.now().timestamp() - ts
+    if diff < 0:
+        return "Updated just now"
+    if diff < 60:
+        return "Updated just now"
+    elif diff < 3600:
+        mins = int(diff / 60)
+        return f"Updated {mins} minute{'s' if mins > 1 else ''} ago"
+    elif diff < 86400:
+        hours = int(diff / 3600)
+        return f"Updated {hours} hour{'s' if hours > 1 else ''} ago"
+    else:
+        days = int(diff / 86400)
+        return f"Updated {days} day{'s' if days > 1 else ''} ago"
 
 def parse_blocklists():
-    html_path = 'data/blocklists.html'
-    if not os.path.exists(html_path): return []
-    with open(html_path, 'r') as f: content = f.read()
+    json_path = 'data/blocklists.json'
+    if not os.path.exists(json_path):
+        return []
+    with open(json_path, 'r') as f:
+        data = json.load(f)
     
-    items_html = re.split(r'<div[^>]*class="list-group-item"', content)[1:]
+    # The response is typically {"data": [...]}
+    items = data.get('data', []) if isinstance(data, dict) else data
     
     blocks = []
-    seen = set()
-    
-    for html in items_html:
-        name_match = re.search(r'style="font-weight: 500;">(.*?)</div>', html)
-        if not name_match: continue
-        name = name_match.group(1).strip()
-        if name in seen: continue
-        seen.add(name)
+    for item in items:
+        id_ = item.get('id')
+        name = item.get('name')
+        description = item.get('description', '')
+        website = item.get('website', '')
+        entries = item.get('entries', 0)
+        updated_on = item.get('updatedOn')
 
-        desc_match = re.search(r'style="font-size: 0.9em; opacity: 0.5;">(.*?)</div>', html)
-        description = desc_match.group(1).strip() if desc_match else ""
+        # Static overrides for nextdns-recommended
+        if id_ == 'nextdns-recommended':
+            name = 'NextDNS Ads & Trackers Blocklist'
+            description = 'A comprehensive blocklist to block ads & trackers in all countries. This is the recommended starter blocklist.'
+            website = 'https://nextdns.io'
+        
+        if not name:
+            name = id_.replace('-', ' ').title()
 
-        link_match = re.search(r'<a target="_blank"[^>]*href="(.*?)"', html)
-        website = link_match.group(1).strip() if link_match else ""
+        if updated_on:
+            try:
+                # Parse ISO8601 string
+                dt = datetime.fromisoformat(updated_on.replace('Z', '+00:00'))
+                updated_ts = dt.timestamp()
+            except Exception:
+                updated_ts = datetime.now().timestamp()
+        else:
+            updated_ts = datetime.now().timestamp()
 
-        entries_match = re.search(r'style="opacity: 0.4;">(.*?) entries</span>', html)
-        entries_text = f"{entries_match.group(1).strip()} entries" if entries_match else "0 entries"
-        entry_val = entries_match.group(1).replace(',', '').replace(' ', '') if entries_match else "0"
-        entries_count = int(entry_val) if entry_val.isdigit() else 0
-
-        updated_match = re.search(r'style="opacity: 0.4;">Updated (.*?)</span>', html)
-        updated_text = f"Updated {updated_match.group(1).strip()}" if updated_match else "Updated unknown"
-        updated_ts = parse_relative_date(updated_match.group(1)) if updated_match else datetime.now().timestamp()
-
-        id_ = name.lower().replace(' & ', '-').replace(' ', '-').replace('.', '').replace("'", '').replace('(', '').replace(')', '')
-        if "nextdns-ads" in id_ and "trackers" in id_: id_ = "nextdns-recommended"
+        updated_text = format_relative_time(updated_ts)
+        entries_text = f"{entries:,} entries"
 
         blocks.append({
-            "id": id_, "name": name, "description": description, "website": website,
-            "entries_text": entries_text, "entries": entries_count, "updated_text": updated_text,
-            "updated_ts": updated_ts, "popularity": 0 
+            "id": id_,
+            "name": name,
+            "description": description or "",
+            "website": website or "",
+            "entries_text": entries_text,
+            "entries": entries,
+            "updated_text": updated_text,
+            "updated_ts": updated_ts,
+            "popularity": 0
         })
 
+    # Sort blocks based on original order to assign popularity
     for idx, b in enumerate(blocks):
         b["popularity"] = len(blocks) - idx
         
     return blocks
 
 def parse_services():
-    html_path = 'data/websiteapporgame.html'
-    if not os.path.exists(html_path): return []
-    with open(html_path, 'r') as f: content = f.read()
+    json_path = 'data/websiteapporgame.json'
+    if not os.path.exists(json_path):
+        return []
+    with open(json_path, 'r') as f:
+        data = json.load(f)
+        
+    items = data.get('data', []) if isinstance(data, dict) else data
     
-    items = re.findall(r'notranslate"[^>]*style="font-weight: 500;">(.*?)</span>', content)
-    seen = set()
     services = []
-    for name in items:
-        name = name.strip()
-        if name in seen: continue
-        seen.add(name)
-        id_ = name.lower().replace(' ', '-')
-        norm = {"Disney+": "disneyplus", "HBO Max": "hbomax", "Prime Video": "primevideo", "Xbox Live": "xboxlive", "PlayStation Network": "playstation-network", "YouTube": "youtube"}
-        id_ = norm.get(name, id_)
+    for item in items:
+        id_ = item.get('id')
+        name = SERVICE_NAMES.get(id_, id_.replace('-', ' ').title())
         services.append({"id": id_, "name": name})
+        
     return services
 
 def parse_tlds():
-    html_path = 'data/tlds.html'
-    if not os.path.exists(html_path): return []
-    with open(html_path, 'r') as f: content = f.read()
-    raw_tlds = re.findall(r'notranslate"[^>]*>\.(.*?)</span>', content)
+    json_path = 'data/tlds.json'
+    if not os.path.exists(json_path):
+        return []
+    with open(json_path, 'r') as f:
+        data = json.load(f)
+        
+    # The TLDs list is inside {"data": {"tlds": [{"id": "com"}, ...]}}
+    tlds_data = data.get('data', {}).get('tlds', []) if isinstance(data, dict) else []
+    raw_tlds = [t.get('id') for t in tlds_data if t.get('id')]
+    
     filtered = [tld for tld in set(raw_tlds) if re.match(r'^[a-zA-Z0-9.-]+$', tld)]
     return sorted(filtered)
 
@@ -99,7 +171,6 @@ def main():
         {"id": "video-streaming", "name": "Video Streaming", "description": "Blocks video streaming services."}
     ]
 
-    # Revert to single JSON payload
     meta = {
         "last_updated": datetime.now().isoformat(),
         "blocklists": blocklists,
@@ -116,3 +187,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
