@@ -24,8 +24,8 @@
         "name": "EasyList",
         "website": "https://easylist.to",
         "description": "EasyList is the primary filter list that removes most adverts from international webpages, including unwanted frames, images and objects. It is the most popular list used by many ad blockers and forms the basis of over a dozen combination and supplementary filter lists.",
-        "entries": 48132,
-        "updatedOn": "2026-07-11T02:01:34.000Z"
+        "entries": 48452,
+        "updatedOn": "2026-07-12T02:01:42.000Z"
       },
       {
         "id": "steven-black",
@@ -40,8 +40,8 @@
         "name": "OISD",
         "website": "https://oisd.nl",
         "description": "Internet's #1 domain blocklist. Blocks Ads, Mobile Ads, Phishing, Malvertising, Malware, Tracking, Telemetry, CryptoJacking, Analytics, Spyware, Ransomware, Exploit, Fraud, Abuse, Scam, Spam, Hijack, Misleading Marketing.",
-        "entries": 497628,
-        "updatedOn": "2026-07-11T01:16:39.000Z"
+        "entries": 503369,
+        "updatedOn": "2026-07-12T01:16:44.000Z"
       },
       {
         "id": "notracking",
@@ -72,16 +72,16 @@
         "name": "AdGuard Tracking Protection filter",
         "website": "https://kb.adguard.com/general/adguard-ad-filters#tracking-protection-filter",
         "description": "The most comprehensive list of various online counters and web analytics tools. If you do not want your actions on the Internet be tracked, use this filter.",
-        "entries": 84855,
-        "updatedOn": "2026-07-11T01:32:21.000Z"
+        "entries": 84857,
+        "updatedOn": "2026-07-11T18:16:18.000Z"
       },
       {
         "id": "adguard-base-filter",
         "name": "AdGuard Base filter",
         "website": "https://kb.adguard.com/general/adguard-ad-filters#base-filter",
         "description": "Filter that enables removing of the ads from websites with English content.",
-        "entries": 57470,
-        "updatedOn": "2026-07-11T01:30:52.000Z"
+        "entries": 57793,
+        "updatedOn": "2026-07-12T01:31:00.000Z"
       },
       {
         "id": "fanboy-annoyance",
@@ -89,7 +89,7 @@
         "website": "https://easylist.to",
         "description": "Fanboy's Annoyance List blocks Social Media content, in-page pop-ups and other annoyances; thereby substantially decreasing web page loading times and uncluttering them.",
         "entries": 910,
-        "updatedOn": "2026-07-11T02:00:47.000Z"
+        "updatedOn": "2026-07-12T02:00:30.000Z"
       },
       {
         "id": "windowsspyblocker-spy",
@@ -144,8 +144,8 @@
         "name": "Peter Lowe",
         "website": "https://pgl.yoyo.org/adservers",
         "description": "Blocklist for use with hosts files to block ads.",
-        "entries": 3515,
-        "updatedOn": "2026-07-08T08:01:43.000Z"
+        "entries": 3523,
+        "updatedOn": "2026-07-11T21:01:06.000Z"
       },
       {
         "id": "someonewhocares",
@@ -161,7 +161,7 @@
         "website": "https://kb.adguard.com/general/adguard-ad-filters#social-media-filter",
         "description": "If you do not like numerous \u00abLike\u00bb and \u00abTweet\u00bb buttons on all the popular websites on the Internet, subscribe to this filter, and you will not see them anymore.",
         "entries": 48,
-        "updatedOn": "2026-07-10T12:45:45.000Z"
+        "updatedOn": "2026-07-11T21:46:49.000Z"
       },
       {
         "id": "notrack-tracker-blocklist",
@@ -184,8 +184,8 @@
         "name": "EasyList China",
         "website": "https://easylist.to/pages/other-supplementary-filter-lists-and-easylist-variants.html",
         "description": "EasyList China is an affiliated filter list written by John and Li that specifically removes adverts on Chinese language websites.",
-        "entries": 6234,
-        "updatedOn": "2026-07-11T02:01:35.000Z"
+        "entries": 6242,
+        "updatedOn": "2026-07-12T02:01:11.000Z"
       },
       {
         "id": "perflyst-smarttv",
@@ -201,7 +201,7 @@
         "website": "https://kb.adguard.com/general/adguard-ad-filters#russian-filter",
         "description": "Filter that enables removing of the ads from websites in Russian.",
         "entries": 1896,
-        "updatedOn": "2026-07-10T15:45:43.000Z"
+        "updatedOn": "2026-07-11T21:16:55.000Z"
       },
       {
         "id": "easylist-germany",
@@ -209,7 +209,7 @@
         "website": "https://easylist.to/pages/other-supplementary-filter-lists-and-easylist-variants.html",
         "description": "EasyList Germany is a filter list written by the EasyList authors MonztA, Famlam and Khrin that specifically removes adverts on German language websites.",
         "entries": 335,
-        "updatedOn": "2026-07-09T16:32:24.000Z"
+        "updatedOn": "2026-07-11T19:01:26.000Z"
       },
       {
         "id": "ru-adlist",
@@ -217,7 +217,7 @@
         "website": "https://forums.lanik.us/viewforum.php?f=102",
         "description": "Russian supplement for EasyList.",
         "entries": 9004,
-        "updatedOn": "2026-07-11T02:01:33.000Z"
+        "updatedOn": "2026-07-12T02:00:17.000Z"
       },
       {
         "id": "liste-fr",
@@ -225,7 +225,7 @@
         "website": "https://easylist.to/pages/other-supplementary-filter-lists-and-easylist-variants.html",
         "description": "Liste FR is an affiliated filter list written by Lian, Crits and smed79 that specifically removes adverts on French language websites.",
         "entries": 5127,
-        "updatedOn": "2026-07-11T02:01:34.000Z"
+        "updatedOn": "2026-07-12T02:00:38.000Z"
       },
       {
         "id": "wally3k-personal",
@@ -249,7 +249,7 @@
         "website": "https://easylist.to/pages/other-supplementary-filter-lists-and-easylist-variants.html",
         "description": "EasyList Dutch is an affiliated filter list written by the EasyList author Famlam that specifically removes adverts on Dutch language websites.",
         "entries": 56,
-        "updatedOn": "2026-07-11T02:01:24.000Z"
+        "updatedOn": "2026-07-12T02:01:34.000Z"
       },
       {
         "id": "lightswitch05-tracking-aggressive",
@@ -265,7 +265,7 @@
         "website": "https://github.com/ABPindo/indonesianadblockrules",
         "description": "ABPindo is an affiliated filter list written by hermawan that specifically removes adverts on Indonesian language websites.",
         "entries": 125,
-        "updatedOn": "2026-07-05T10:00:54.000Z"
+        "updatedOn": "2026-07-11T11:46:44.000Z"
       },
       {
         "id": "youslist",
@@ -281,7 +281,7 @@
         "website": "https://easylist.to/pages/other-supplementary-filter-lists-and-easylist-variants.html",
         "description": "EasyList Italy is a filter list written by the EasyList author Khrin that specifically removes adverts on Italian language websites.",
         "entries": 92,
-        "updatedOn": "2026-07-11T02:01:04.000Z"
+        "updatedOn": "2026-07-12T02:00:10.000Z"
       },
       {
         "id": "certyficateit",
@@ -329,7 +329,7 @@
         "website": "https://easylist.to/pages/other-supplementary-filter-lists-and-easylist-variants.html",
         "description": "Liste AR is an affiliated filter list written by smed79 and Crits that specifically removes adverts on Arabic language websites.",
         "entries": 72,
-        "updatedOn": "2026-07-11T02:00:42.000Z"
+        "updatedOn": "2026-07-12T02:01:47.000Z"
       },
       {
         "id": "easylist-czech-slovak",
@@ -345,7 +345,7 @@
         "website": "https://github.com/finnish-easylist-addition/finnish-easylist-addition",
         "description": "Finnish adblock list.",
         "entries": 14,
-        "updatedOn": "2026-07-08T18:45:54.000Z"
+        "updatedOn": "2026-07-11T15:31:46.000Z"
       },
       {
         "id": "easylist-hebrew",
@@ -408,8 +408,8 @@
         "name": "1Hosts (Lite)",
         "website": "https://github.com/badmojr/1Hosts",
         "description": "Safeguard your device(s) against pesky ads, trackers, and malware.",
-        "entries": 99667,
-        "updatedOn": "2026-07-10T11:00:53.000Z"
+        "entries": 99698,
+        "updatedOn": "2026-07-11T09:16:25.000Z"
       },
       {
         "id": "easyprivacy",
@@ -417,7 +417,7 @@
         "website": "https://easylist.to",
         "description": "EasyPrivacy is an optional supplementary filter list that completely removes all forms of tracking from the internet, including web bugs, tracking scripts and information collectors, thereby protecting your personal data.",
         "entries": 46410,
-        "updatedOn": "2026-07-11T02:00:45.000Z"
+        "updatedOn": "2026-07-12T02:01:30.000Z"
       },
       {
         "id": "goodbye-ads",
@@ -456,40 +456,40 @@
         "name": "HaGeZi - Multi NORMAL",
         "website": "https://github.com/hagezi/dns-blocklists",
         "description": "Broom - Cleans the Internet and protects your privacy! Blocks Ads, Affiliate, Tracking, Metrics, Telemetry, Phishing, Malware, Scam, Fake, Coins and other Crap.",
-        "entries": 160351,
-        "updatedOn": "2026-07-10T19:47:03.000Z"
+        "entries": 160709,
+        "updatedOn": "2026-07-11T19:15:59.000Z"
       },
       {
         "id": "hagezi-multi-ultimate",
         "name": "HaGeZi - Multi ULTIMATE",
         "website": "https://github.com/hagezi/dns-blocklists",
         "description": "Ultimate Sweeper - Strictly cleans the Internet and protects your privacy! Blocks Ads, Affiliate, Tracking (+Referral), Metrics, Telemetry, Phishing, Malware, Scam, Free Hoster, Fake, Coins and other Crap.",
-        "entries": 271315,
-        "updatedOn": "2026-07-10T19:46:49.000Z"
+        "entries": 272974,
+        "updatedOn": "2026-07-11T19:15:45.000Z"
       },
       {
         "id": "hagezi-multi-light",
         "name": "HaGeZi - Multi LIGHT",
         "website": "https://github.com/hagezi/dns-blocklists",
         "description": "Hand brush - Cleans the Internet and protects your privacy! Blocks Ads, Tracking, Metrics, some Malware and Fake.",
-        "entries": 43546,
-        "updatedOn": "2026-07-10T19:47:01.000Z"
+        "entries": 43307,
+        "updatedOn": "2026-07-11T19:15:28.000Z"
       },
       {
         "id": "hagezi-multi-pro-plus",
         "name": "HaGeZi - Multi PRO++",
         "website": "https://github.com/hagezi/dns-blocklists",
         "description": "Sweeper - Aggressive cleans the Internet and protects your privacy! Blocks Ads, Affiliate, Tracking, Metrics, Telemetry, Phishing, Malware, Scam, Fake, Coins and other Crap.",
-        "entries": 248072,
-        "updatedOn": "2026-07-10T19:45:14.000Z"
+        "entries": 249681,
+        "updatedOn": "2026-07-11T19:15:54.000Z"
       },
       {
         "id": "hagezi-multi-pro",
         "name": "HaGeZi - Multi PRO",
         "website": "https://github.com/hagezi/dns-blocklists",
         "description": "Big broom - Cleans the Internet and protects your privacy! Blocks Ads, Affiliate, Tracking, Metrics, Telemetry, Phishing, Malware, Scam, Fake, Coins and other Crap.",
-        "entries": 230105,
-        "updatedOn": "2026-07-10T19:45:50.000Z"
+        "entries": 231703,
+        "updatedOn": "2026-07-11T19:16:05.000Z"
       },
       {
         "id": "anti-ad",
@@ -504,8 +504,8 @@
         "name": "AdGuard DNS filter",
         "website": "https://github.com/AdguardTeam/AdguardSDNSFilter",
         "description": "A filter composed of several other filters (AdGuard Base filter, Social media filter, Tracking Protection filter, Mobile Ads filter, EasyList and EasyPrivacy) and simplified specifically to be better compatible with DNS-level ad blocking.",
-        "entries": 155183,
-        "updatedOn": "2026-07-11T00:47:51.000Z"
+        "entries": 155516,
+        "updatedOn": "2026-07-12T00:46:17.000Z"
       }
     ],
     "natives": [
