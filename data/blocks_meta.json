@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-07-18T02:00:56.009133",
+  "last_updated": "2026-07-19T02:11:56.489102",
   "blocklists": [
     {
       "id": "nextdns-recommended",
       "name": "NextDNS Ads & Trackers Blocklist",
       "description": "A comprehensive blocklist to block ads & trackers in all countries. This is the recommended starter blocklist.",
       "website": "https://nextdns.io",
-      "entries_text": "77,243 entries",
-      "entries": 77243,
-      "updated_text": "Updated 3 days ago",
-      "updated_ts": 1784078133.0,
+      "entries_text": "82,123 entries",
+      "entries": 82123,
+      "updated_text": "Updated 4 hours ago",
+      "updated_ts": 1784412016.0,
       "popularity": 83
     },
     {
@@ -17,10 +17,10 @@
       "name": "AdGuard DNS filter",
       "description": "A filter composed of several other filters (AdGuard Base filter, Social media filter, Tracking Protection filter, Mobile Ads filter, EasyList and EasyPrivacy) and simplified specifically to be better compatible with DNS-level ad blocking.",
       "website": "https://github.com/AdguardTeam/AdguardSDNSFilter",
-      "entries_text": "157,346 entries",
-      "entries": 157346,
+      "entries_text": "157,236 entries",
+      "entries": 157236,
       "updated_text": "Updated 1 hour ago",
-      "updated_ts": 1784335558.0,
+      "updated_ts": 1784421944.0,
       "popularity": 82
     },
     {
@@ -28,10 +28,10 @@
       "name": "OISD",
       "description": "Internet's #1 domain blocklist. Blocks Ads, Mobile Ads, Phishing, Malvertising, Malware, Tracking, Telemetry, CryptoJacking, Analytics, Spyware, Ransomware, Exploit, Fraud, Abuse, Scam, Spam, Hijack, Misleading Marketing.",
       "website": "https://oisd.nl",
-      "entries_text": "327,738 entries",
-      "entries": 327738,
-      "updated_text": "Updated 45 minutes ago",
-      "updated_ts": 1784337354.0,
+      "entries_text": "326,430 entries",
+      "entries": 326430,
+      "updated_text": "Updated 55 minutes ago",
+      "updated_ts": 1784423804.0,
       "popularity": 81
     },
     {
@@ -41,7 +41,7 @@
       "website": "https://kb.adguard.com/general/adguard-ad-filters#mobile-ads-filter",
       "entries_text": "940 entries",
       "entries": 940,
-      "updated_text": "Updated 12 hours ago",
+      "updated_text": "Updated 1 day ago",
       "updated_ts": 1784294137.0,
       "popularity": 80
     },
@@ -50,10 +50,10 @@
       "name": "EasyList",
       "description": "EasyList is the primary filter list that removes most adverts from international webpages, including unwanted frames, images and objects. It is the most popular list used by many ad blockers and forms the basis of over a dozen combination and supplementary filter lists.",
       "website": "https://easylist.to",
-      "entries_text": "50,135 entries",
-      "entries": 50135,
-      "updated_text": "Updated just now",
-      "updated_ts": 1784340044.0,
+      "entries_text": "50,423 entries",
+      "entries": 50423,
+      "updated_text": "Updated 11 minutes ago",
+      "updated_ts": 1784426452.0,
       "popularity": 79
     },
     {
@@ -61,10 +61,10 @@
       "name": "AdGuard Tracking Protection filter",
       "description": "The most comprehensive list of various online counters and web analytics tools. If you do not want your actions on the Internet be tracked, use this filter.",
       "website": "https://kb.adguard.com/general/adguard-ad-filters#tracking-protection-filter",
-      "entries_text": "84,887 entries",
-      "entries": 84887,
-      "updated_text": "Updated 7 hours ago",
-      "updated_ts": 1784314825.0,
+      "entries_text": "84,889 entries",
+      "entries": 84889,
+      "updated_text": "Updated 3 hours ago",
+      "updated_ts": 1784415613.0,
       "popularity": 78
     },
     {
@@ -74,7 +74,7 @@
       "website": "https://github.com/jerryn70/GoodbyeAds",
       "entries_text": "277,778 entries",
       "entries": 277778,
-      "updated_text": "Updated 603 days ago",
+      "updated_text": "Updated 604 days ago",
       "updated_ts": 1732171562.0,
       "popularity": 77
     },
@@ -83,10 +83,10 @@
       "name": "Steven Black",
       "description": "Extending and consolidating hosts files from several well-curated sources like adaway.org, mvps.org, malwaredomainlist.com, someonewhocares.org, and potentially others.",
       "website": "https://github.com/StevenBlack/hosts",
-      "entries_text": "76,004 entries",
-      "entries": 76004,
-      "updated_text": "Updated 3 days ago",
-      "updated_ts": 1784078122.0,
+      "entries_text": "80,884 entries",
+      "entries": 80884,
+      "updated_text": "Updated 4 hours ago",
+      "updated_ts": 1784412196.0,
       "popularity": 76
     },
     {
@@ -94,10 +94,10 @@
       "name": "AdGuard Base filter",
       "description": "Filter that enables removing of the ads from websites with English content.",
       "website": "https://kb.adguard.com/general/adguard-ad-filters#base-filter",
-      "entries_text": "59,483 entries",
-      "entries": 59483,
-      "updated_text": "Updated 45 minutes ago",
-      "updated_ts": 1784337349.0,
+      "entries_text": "59,771 entries",
+      "entries": 59771,
+      "updated_text": "Updated 55 minutes ago",
+      "updated_ts": 1784423788.0,
       "popularity": 75
     },
     {
@@ -105,10 +105,10 @@
       "name": "EasyPrivacy",
       "description": "EasyPrivacy is an optional supplementary filter list that completely removes all forms of tracking from the internet, including web bugs, tracking scripts and information collectors, thereby protecting your personal data.",
       "website": "https://easylist.to",
-      "entries_text": "46,438 entries",
-      "entries": 46438,
-      "updated_text": "Updated just now",
-      "updated_ts": 1784340030.0,
+      "entries_text": "46,441 entries",
+      "entries": 46441,
+      "updated_text": "Updated 10 minutes ago",
+      "updated_ts": 1784426461.0,
       "popularity": 74
     },
     {
@@ -116,10 +116,10 @@
       "name": "HaGeZi - Multi PRO++",
       "description": "Sweeper - Aggressive cleans the Internet and protects your privacy! Blocks Ads, Affiliate, Tracking, Metrics, Telemetry, Phishing, Malware, Scam, Fake, Coins and other Crap.",
       "website": "https://github.com/hagezi/dns-blocklists",
-      "entries_text": "271,959 entries",
-      "entries": 271959,
+      "entries_text": "273,087 entries",
+      "entries": 273087,
       "updated_text": "Updated 6 hours ago",
-      "updated_ts": 1784314890.0,
+      "updated_ts": 1784403143.0,
       "popularity": 73
     },
     {
@@ -127,10 +127,10 @@
       "name": "HaGeZi - Multi PRO",
       "description": "Big broom - Cleans the Internet and protects your privacy! Blocks Ads, Affiliate, Tracking, Metrics, Telemetry, Phishing, Malware, Scam, Fake, Coins and other Crap.",
       "website": "https://github.com/hagezi/dns-blocklists",
-      "entries_text": "253,487 entries",
-      "entries": 253487,
+      "entries_text": "254,596 entries",
+      "entries": 254596,
       "updated_text": "Updated 6 hours ago",
-      "updated_ts": 1784314896.0,
+      "updated_ts": 1784402232.0,
       "popularity": 72
     },
     {
@@ -140,7 +140,7 @@
       "website": "https://github.com/notracking/hosts-blocklists",
       "entries_text": "419,961 entries",
       "entries": 419961,
-      "updated_text": "Updated 1117 days ago",
+      "updated_text": "Updated 1118 days ago",
       "updated_ts": 1687779082.0,
       "popularity": 71
     },
@@ -151,8 +151,8 @@
       "website": "https://easylist.to",
       "entries_text": "910 entries",
       "entries": 910,
-      "updated_text": "Updated just now",
-      "updated_ts": 1784340020.0,
+      "updated_text": "Updated 10 minutes ago",
+      "updated_ts": 1784426467.0,
       "popularity": 70
     },
     {
@@ -162,7 +162,7 @@
       "website": "https://github.com/CHEF-KOCH/NSABlocklist",
       "entries_text": "8,197 entries",
       "entries": 8197,
-      "updated_text": "Updated 2289 days ago",
+      "updated_text": "Updated 2290 days ago",
       "updated_ts": 1586487608.0,
       "popularity": 69
     },
@@ -173,20 +173,9 @@
       "website": "https://github.com/AdAway/adaway.github.io",
       "entries_text": "6,541 entries",
       "entries": 6541,
-      "updated_text": "Updated 1173 days ago",
+      "updated_text": "Updated 1174 days ago",
       "updated_ts": 1682924465.0,
       "popularity": 68
-    },
-    {
-      "id": "adguard-social-media-filter",
-      "name": "AdGuard Social Media filter",
-      "description": "If you do not like numerous \u00abLike\u00bb and \u00abTweet\u00bb buttons on all the popular websites on the Internet, subscribe to this filter, and you will not see them anymore.",
-      "website": "https://kb.adguard.com/general/adguard-ad-filters#social-media-filter",
-      "entries_text": "48 entries",
-      "entries": 48,
-      "updated_text": "Updated 10 hours ago",
-      "updated_ts": 1784301348.0,
-      "popularity": 67
     },
     {
       "id": "disconnect-ads",
@@ -195,8 +184,19 @@
       "website": "https://disconnect.me",
       "entries_text": "2,700 entries",
       "entries": 2700,
-      "updated_text": "Updated 43 days ago",
+      "updated_text": "Updated 44 days ago",
       "updated_ts": 1780599653.0,
+      "popularity": 67
+    },
+    {
+      "id": "adguard-social-media-filter",
+      "name": "AdGuard Social Media filter",
+      "description": "If you do not like numerous \u00abLike\u00bb and \u00abTweet\u00bb buttons on all the popular websites on the Internet, subscribe to this filter, and you will not see them anymore.",
+      "website": "https://kb.adguard.com/general/adguard-ad-filters#social-media-filter",
+      "entries_text": "48 entries",
+      "entries": 48,
+      "updated_text": "Updated 15 hours ago",
+      "updated_ts": 1784370683.0,
       "popularity": 66
     },
     {
@@ -206,7 +206,7 @@
       "website": "https://someonewhocares.org/hosts",
       "entries_text": "12,959 entries",
       "entries": 12959,
-      "updated_text": "Updated 2 hours ago",
+      "updated_text": "Updated 1 day ago",
       "updated_ts": 1784329295.0,
       "popularity": 65
     },
@@ -215,10 +215,10 @@
       "name": "HaGeZi - Multi NORMAL",
       "description": "Broom - Cleans the Internet and protects your privacy! Blocks Ads, Affiliate, Tracking, Metrics, Telemetry, Phishing, Malware, Scam, Fake, Coins and other Crap.",
       "website": "https://github.com/hagezi/dns-blocklists",
-      "entries_text": "177,406 entries",
-      "entries": 177406,
-      "updated_text": "Updated 7 hours ago",
-      "updated_ts": 1784314823.0,
+      "entries_text": "177,840 entries",
+      "entries": 177840,
+      "updated_text": "Updated 6 hours ago",
+      "updated_ts": 1784402132.0,
       "popularity": 64
     },
     {
@@ -228,7 +228,7 @@
       "website": "https://www.github.developerdan.com/hosts",
       "entries_text": "429,282 entries",
       "entries": 429282,
-      "updated_text": "Updated 974 days ago",
+      "updated_text": "Updated 975 days ago",
       "updated_ts": 1700183787.0,
       "popularity": 63
     },
@@ -237,10 +237,10 @@
       "name": "HaGeZi - Multi ULTIMATE",
       "description": "Ultimate Sweeper - Strictly cleans the Internet and protects your privacy! Blocks Ads, Affiliate, Tracking (+Referral), Metrics, Telemetry, Phishing, Malware, Scam, Free Hoster, Fake, Coins and other Crap.",
       "website": "https://github.com/hagezi/dns-blocklists",
-      "entries_text": "295,876 entries",
-      "entries": 295876,
+      "entries_text": "297,578 entries",
+      "entries": 297578,
       "updated_text": "Updated 6 hours ago",
-      "updated_ts": 1784314875.0,
+      "updated_ts": 1784402131.0,
       "popularity": 62
     },
     {
@@ -250,7 +250,7 @@
       "website": "https://github.com/crazy-max/WindowsSpyBlocker",
       "entries_text": "347 entries",
       "entries": 347,
-      "updated_text": "Updated 1523 days ago",
+      "updated_text": "Updated 1524 days ago",
       "updated_ts": 1652704247.0,
       "popularity": 61
     },
@@ -261,7 +261,7 @@
       "website": "https://gitlab.com/quidsup/notrack-blocklists",
       "entries_text": "15,372 entries",
       "entries": 15372,
-      "updated_text": "Updated 4 days ago",
+      "updated_text": "Updated 5 days ago",
       "updated_ts": 1783947690.0,
       "popularity": 60
     },
@@ -272,7 +272,7 @@
       "website": "https://pgl.yoyo.org/adservers",
       "entries_text": "3,525 entries",
       "entries": 3525,
-      "updated_text": "Updated 1 day ago",
+      "updated_text": "Updated 2 days ago",
       "updated_ts": 1784191573.0,
       "popularity": 59
     },
@@ -283,7 +283,7 @@
       "website": "https://hblock.molinero.dev",
       "entries_text": "437,656 entries",
       "entries": 437656,
-      "updated_text": "Updated 25 days ago",
+      "updated_text": "Updated 26 days ago",
       "updated_ts": 1782094616.0,
       "popularity": 58
     },
@@ -292,10 +292,10 @@
       "name": "1Hosts (Lite)",
       "description": "Safeguard your device(s) against pesky ads, trackers, and malware.",
       "website": "https://github.com/badmojr/1Hosts",
-      "entries_text": "101,070 entries",
-      "entries": 101070,
+      "entries_text": "102,155 entries",
+      "entries": 102155,
       "updated_text": "Updated 16 hours ago",
-      "updated_ts": 1784281531.0,
+      "updated_ts": 1784367048.0,
       "popularity": 57
     },
     {
@@ -305,7 +305,7 @@
       "website": "https://disconnect.me",
       "entries_text": "34 entries",
       "entries": 34,
-      "updated_text": "Updated 2289 days ago",
+      "updated_text": "Updated 2290 days ago",
       "updated_ts": 1586487608.0,
       "popularity": 56
     },
@@ -316,7 +316,7 @@
       "website": "https://github.com/Perflyst/PiHoleBlocklist",
       "entries_text": "245 entries",
       "entries": 245,
-      "updated_text": "Updated 242 days ago",
+      "updated_text": "Updated 243 days ago",
       "updated_ts": 1763383534.0,
       "popularity": 55
     },
@@ -327,7 +327,7 @@
       "website": "https://kb.adguard.com/general/adguard-ad-filters#russian-filter",
       "entries_text": "1,900 entries",
       "entries": 1900,
-      "updated_text": "Updated 8 hours ago",
+      "updated_text": "Updated 1 day ago",
       "updated_ts": 1784308534.0,
       "popularity": 54
     },
@@ -336,22 +336,11 @@
       "name": "EasyList China",
       "description": "EasyList China is an affiliated filter list written by John and Li that specifically removes adverts on Chinese language websites.",
       "website": "https://easylist.to/pages/other-supplementary-filter-lists-and-easylist-variants.html",
-      "entries_text": "6,316 entries",
-      "entries": 6316,
-      "updated_text": "Updated 14 minutes ago",
-      "updated_ts": 1784339198.0,
+      "entries_text": "5,912 entries",
+      "entries": 5912,
+      "updated_text": "Updated 11 minutes ago",
+      "updated_ts": 1784426409.0,
       "popularity": 53
-    },
-    {
-      "id": "1hosts-pro",
-      "name": "1Hosts (Pro)",
-      "description": "Safeguard your device(s) against pesky ads, trackers, and malware.",
-      "website": "https://github.com/badmojr/1Hosts",
-      "entries_text": "0 entries",
-      "entries": 0,
-      "updated_text": "Updated 292 days ago",
-      "updated_ts": 1759045539.0,
-      "popularity": 52
     },
     {
       "id": "anudeep-blacklist",
@@ -360,8 +349,19 @@
       "website": "https://github.com/anudeepND/blacklist",
       "entries_text": "42,358 entries",
       "entries": 42358,
-      "updated_text": "Updated 202 days ago",
+      "updated_text": "Updated 203 days ago",
       "updated_ts": 1766816148.0,
+      "popularity": 52
+    },
+    {
+      "id": "1hosts-pro",
+      "name": "1Hosts (Pro)",
+      "description": "Safeguard your device(s) against pesky ads, trackers, and malware.",
+      "website": "https://github.com/badmojr/1Hosts",
+      "entries_text": "0 entries",
+      "entries": 0,
+      "updated_text": "Updated 293 days ago",
+      "updated_ts": 1759045539.0,
       "popularity": 51
     },
     {
@@ -371,7 +371,7 @@
       "website": "https://disconnect.me",
       "entries_text": "2,736 entries",
       "entries": 2736,
-      "updated_text": "Updated 2289 days ago",
+      "updated_text": "Updated 2290 days ago",
       "updated_ts": 1586487608.0,
       "popularity": 50
     },
@@ -382,7 +382,7 @@
       "website": "https://github.com/privacy-protection-tools/anti-AD",
       "entries_text": "107,583 entries",
       "entries": 107583,
-      "updated_text": "Updated 1 day ago",
+      "updated_text": "Updated 2 days ago",
       "updated_ts": 1784231187.0,
       "popularity": 49
     },
@@ -393,7 +393,7 @@
       "website": "https://fanboy.co.nz",
       "entries_text": "0 entries",
       "entries": 0,
-      "updated_text": "Updated 984 days ago",
+      "updated_text": "Updated 985 days ago",
       "updated_ts": 1699269347.0,
       "popularity": 48
     },
@@ -402,10 +402,10 @@
       "name": "HaGeZi - Multi LIGHT",
       "description": "Hand brush - Cleans the Internet and protects your privacy! Blocks Ads, Tracking, Metrics, some Malware and Fake.",
       "website": "https://github.com/hagezi/dns-blocklists",
-      "entries_text": "43,592 entries",
-      "entries": 43592,
-      "updated_text": "Updated 7 hours ago",
-      "updated_ts": 1784314846.0,
+      "entries_text": "43,504 entries",
+      "entries": 43504,
+      "updated_text": "Updated 6 hours ago",
+      "updated_ts": 1784402119.0,
       "popularity": 47
     },
     {
@@ -415,8 +415,8 @@
       "website": "https://easylist.to/pages/other-supplementary-filter-lists-and-easylist-variants.html",
       "entries_text": "336 entries",
       "entries": 336,
-      "updated_text": "Updated 12 hours ago",
-      "updated_ts": 1784296813.0,
+      "updated_text": "Updated 15 hours ago",
+      "updated_ts": 1784370652.0,
       "popularity": 46
     },
     {
@@ -424,10 +424,10 @@
       "name": "RU AdList",
       "description": "Russian supplement for EasyList.",
       "website": "https://forums.lanik.us/viewforum.php?f=102",
-      "entries_text": "9,010 entries",
-      "entries": 9010,
-      "updated_text": "Updated just now",
-      "updated_ts": 1784340046.0,
+      "entries_text": "9,011 entries",
+      "entries": 9011,
+      "updated_text": "Updated 10 minutes ago",
+      "updated_ts": 1784426457.0,
       "popularity": 45
     },
     {
@@ -437,7 +437,7 @@
       "website": "https://energized.pro",
       "entries_text": "0 entries",
       "entries": 0,
-      "updated_text": "Updated 189 days ago",
+      "updated_text": "Updated 190 days ago",
       "updated_ts": 1767952827.0,
       "popularity": 44
     },
@@ -448,7 +448,7 @@
       "website": "https://github.com/bigdargon/hostsVN",
       "entries_text": "18,268 entries",
       "entries": 18268,
-      "updated_text": "Updated 18 hours ago",
+      "updated_text": "Updated 1 day ago",
       "updated_ts": 1784272579.0,
       "popularity": 43
     },
@@ -459,7 +459,7 @@
       "website": "http://winhelp2002.mvps.org/hosts.htm",
       "entries_text": "8,731 entries",
       "entries": 8731,
-      "updated_text": "Updated 1959 days ago",
+      "updated_text": "Updated 1960 days ago",
       "updated_ts": 1615032069.0,
       "popularity": 42
     },
@@ -470,7 +470,7 @@
       "website": "https://github.com/Yhonay/antipopads",
       "entries_text": "755 entries",
       "entries": 755,
-      "updated_text": "Updated 1879 days ago",
+      "updated_text": "Updated 1880 days ago",
       "updated_ts": 1621917038.0,
       "popularity": 41
     },
@@ -481,8 +481,8 @@
       "website": "https://easylist.to/pages/other-supplementary-filter-lists-and-easylist-variants.html",
       "entries_text": "5,210 entries",
       "entries": 5210,
-      "updated_text": "Updated just now",
-      "updated_ts": 1784340051.0,
+      "updated_text": "Updated 11 minutes ago",
+      "updated_ts": 1784426446.0,
       "popularity": 40
     },
     {
@@ -492,7 +492,7 @@
       "website": "http://sysctl.org/cameleon",
       "entries_text": "20,562 entries",
       "entries": 20562,
-      "updated_text": "Updated 1325 days ago",
+      "updated_text": "Updated 1326 days ago",
       "updated_ts": 1669845663.0,
       "popularity": 39
     },
@@ -503,7 +503,7 @@
       "website": "https://gitlab.com/CHEF-KOCH/cks-filterlist",
       "entries_text": "11 entries",
       "entries": 11,
-      "updated_text": "Updated 101 days ago",
+      "updated_text": "Updated 102 days ago",
       "updated_ts": 1775530812.0,
       "popularity": 38
     },
@@ -514,7 +514,7 @@
       "website": "https://abpvn.com",
       "entries_text": "18,987 entries",
       "entries": 18987,
-      "updated_text": "Updated 17 hours ago",
+      "updated_text": "Updated 1 day ago",
       "updated_ts": 1784275315.0,
       "popularity": 37
     },
@@ -525,7 +525,7 @@
       "website": "https://unchecky.com",
       "entries_text": "9 entries",
       "entries": 9,
-      "updated_text": "Updated 1824 days ago",
+      "updated_text": "Updated 1825 days ago",
       "updated_ts": 1626723152.0,
       "popularity": 36
     },
@@ -536,7 +536,7 @@
       "website": "https://280blocker.net",
       "entries_text": "2,964 entries",
       "entries": 2964,
-      "updated_text": "Updated 1 day ago",
+      "updated_text": "Updated 2 days ago",
       "updated_ts": 1784185285.0,
       "popularity": 35
     },
@@ -547,7 +547,7 @@
       "website": "https://github.com/yous/YousList",
       "entries_text": "123 entries",
       "entries": 123,
-      "updated_text": "Updated 22 days ago",
+      "updated_text": "Updated 23 days ago",
       "updated_ts": 1782368112.0,
       "popularity": 34
     },
@@ -558,7 +558,7 @@
       "website": "https://logroid.github.io/adaway-hosts",
       "entries_text": "14,969 entries",
       "entries": 14969,
-      "updated_text": "Updated 962 days ago",
+      "updated_text": "Updated 963 days ago",
       "updated_ts": 1701178207.0,
       "popularity": 33
     },
@@ -569,8 +569,8 @@
       "website": "https://easylist.to/pages/other-supplementary-filter-lists-and-easylist-variants.html",
       "entries_text": "92 entries",
       "entries": 92,
-      "updated_text": "Updated 15 minutes ago",
-      "updated_ts": 1784339152.0,
+      "updated_text": "Updated 11 minutes ago",
+      "updated_ts": 1784426454.0,
       "popularity": 32
     },
     {
@@ -580,8 +580,8 @@
       "website": "https://easylist.to/pages/other-supplementary-filter-lists-and-easylist-variants.html",
       "entries_text": "56 entries",
       "entries": 56,
-      "updated_text": "Updated just now",
-      "updated_ts": 1784340055.0,
+      "updated_text": "Updated 11 minutes ago",
+      "updated_ts": 1784426455.0,
       "popularity": 31
     },
     {
@@ -591,7 +591,7 @@
       "website": "https://www.shallalist.de",
       "entries_text": "1,491 entries",
       "entries": 1491,
-      "updated_text": "Updated 1720 days ago",
+      "updated_text": "Updated 1721 days ago",
       "updated_ts": 1635726648.0,
       "popularity": 30
     },
@@ -602,7 +602,7 @@
       "website": "https://www.shallalist.de",
       "entries_text": "9,922 entries",
       "entries": 9922,
-      "updated_text": "Updated 1734 days ago",
+      "updated_text": "Updated 1735 days ago",
       "updated_ts": 1634461234.0,
       "popularity": 29
     },
@@ -613,7 +613,7 @@
       "website": "https://github.com/ABPindo/indonesianadblockrules",
       "entries_text": "150 entries",
       "entries": 150,
-      "updated_text": "Updated 1 hour ago",
+      "updated_text": "Updated 1 day ago",
       "updated_ts": 1784334652.0,
       "popularity": 28
     },
@@ -624,7 +624,7 @@
       "website": "https://www.github.developerdan.com/hosts",
       "entries_text": "171,820 entries",
       "entries": 171820,
-      "updated_text": "Updated 974 days ago",
+      "updated_text": "Updated 975 days ago",
       "updated_ts": 1700183759.0,
       "popularity": 27
     },
@@ -635,9 +635,20 @@
       "website": "https://energized.pro",
       "entries_text": "0 entries",
       "entries": 0,
-      "updated_text": "Updated 189 days ago",
+      "updated_text": "Updated 190 days ago",
       "updated_ts": 1767952871.0,
       "popularity": 26
+    },
+    {
+      "id": "1hosts-xtra",
+      "name": "1Hosts (Xtra)",
+      "description": "Safeguard your device(s) against pesky ads, trackers, and malware.",
+      "website": "https://github.com/badmojr/1Hosts",
+      "entries_text": "720,598 entries",
+      "entries": 720598,
+      "updated_text": "Updated 16 hours ago",
+      "updated_ts": 1784367097.0,
+      "popularity": 25
     },
     {
       "id": "1hosts-mini",
@@ -646,19 +657,8 @@
       "website": "https://github.com/badmojr/1Hosts",
       "entries_text": "0 entries",
       "entries": 0,
-      "updated_text": "Updated 503 days ago",
+      "updated_text": "Updated 504 days ago",
       "updated_ts": 1740838513.0,
-      "popularity": 25
-    },
-    {
-      "id": "1hosts-xtra",
-      "name": "1Hosts (Xtra)",
-      "description": "Safeguard your device(s) against pesky ads, trackers, and malware.",
-      "website": "https://github.com/badmojr/1Hosts",
-      "entries_text": "717,713 entries",
-      "entries": 717713,
-      "updated_text": "Updated 16 hours ago",
-      "updated_ts": 1784281615.0,
       "popularity": 24
     },
     {
@@ -668,7 +668,7 @@
       "website": "https://energized.pro",
       "entries_text": "0 entries",
       "entries": 0,
-      "updated_text": "Updated 189 days ago",
+      "updated_text": "Updated 190 days ago",
       "updated_ts": 1767949243.0,
       "popularity": 23
     },
@@ -679,7 +679,7 @@
       "website": "http://hostsfile.org/hosts.html",
       "entries_text": "2,030 entries",
       "entries": 2030,
-      "updated_text": "Updated 960 days ago",
+      "updated_text": "Updated 961 days ago",
       "updated_ts": 1701347435.0,
       "popularity": 22
     },
@@ -690,7 +690,7 @@
       "website": "https://github.com/EnergizedProtection/block",
       "entries_text": "0 entries",
       "entries": 0,
-      "updated_text": "Updated 189 days ago",
+      "updated_text": "Updated 190 days ago",
       "updated_ts": 1767956471.0,
       "popularity": 21
     },
@@ -701,7 +701,7 @@
       "website": "https://github.com/MajkiIT/polish-ads-filter",
       "entries_text": "1,089 entries",
       "entries": 1089,
-      "updated_text": "Updated 4 days ago",
+      "updated_text": "Updated 5 days ago",
       "updated_ts": 1783962079.0,
       "popularity": 20
     },
@@ -712,7 +712,7 @@
       "website": "https://firebog.net/about",
       "entries_text": "350 entries",
       "entries": 350,
-      "updated_text": "Updated 856 days ago",
+      "updated_text": "Updated 857 days ago",
       "updated_ts": 1710301575.0,
       "popularity": 19
     },
@@ -723,8 +723,8 @@
       "website": "https://easylist.to/pages/other-supplementary-filter-lists-and-easylist-variants.html",
       "entries_text": "72 entries",
       "entries": 72,
-      "updated_text": "Updated 14 minutes ago",
-      "updated_ts": 1784339190.0,
+      "updated_text": "Updated 11 minutes ago",
+      "updated_ts": 1784426453.0,
       "popularity": 18
     },
     {
@@ -734,20 +734,9 @@
       "website": "https://github.com/EnergizedProtection/block",
       "entries_text": "0 entries",
       "entries": 0,
-      "updated_text": "Updated 189 days ago",
+      "updated_text": "Updated 190 days ago",
       "updated_ts": 1767951953.0,
       "popularity": 17
-    },
-    {
-      "id": "easylist-hebrew",
-      "name": "EasyList Hebrew",
-      "description": "EasyList Hebrew is an affiliated filter list written by BsT that specifically removes adverts on Hebrew language websites.",
-      "website": "https://github.com/easylist/EasyListHebrew",
-      "entries_text": "136 entries",
-      "entries": 136,
-      "updated_text": "Updated 1 day ago",
-      "updated_ts": 1784203265.0,
-      "popularity": 16
     },
     {
       "id": "barbblock",
@@ -756,8 +745,19 @@
       "website": "https://paulgb.github.io/BarbBlock",
       "entries_text": "544 entries",
       "entries": 544,
-      "updated_text": "Updated 380 days ago",
+      "updated_text": "Updated 381 days ago",
       "updated_ts": 1751464888.0,
+      "popularity": 16
+    },
+    {
+      "id": "easylist-hebrew",
+      "name": "EasyList Hebrew",
+      "description": "EasyList Hebrew is an affiliated filter list written by BsT that specifically removes adverts on Hebrew language websites.",
+      "website": "https://github.com/easylist/EasyListHebrew",
+      "entries_text": "136 entries",
+      "entries": 136,
+      "updated_text": "Updated 2 days ago",
+      "updated_ts": 1784203265.0,
       "popularity": 15
     },
     {
@@ -767,7 +767,7 @@
       "website": "https://github.com/finnish-easylist-addition/finnish-easylist-addition",
       "entries_text": "14 entries",
       "entries": 14,
-      "updated_text": "Updated 6 days ago",
+      "updated_text": "Updated 7 days ago",
       "updated_ts": 1783783906.0,
       "popularity": 14
     },
@@ -778,7 +778,7 @@
       "website": "https://github.com/lassekongo83/Frellwits-filter-lists",
       "entries_text": "1,151 entries",
       "entries": 1151,
-      "updated_text": "Updated 4 days ago",
+      "updated_text": "Updated 5 days ago",
       "updated_ts": 1783910770.0,
       "popularity": 13
     },
@@ -789,7 +789,7 @@
       "website": "https://github.com/tomasko126/easylistczechandslovak",
       "entries_text": "93 entries",
       "entries": 93,
-      "updated_text": "Updated 50 days ago",
+      "updated_text": "Updated 51 days ago",
       "updated_ts": 1779963335.0,
       "popularity": 12
     },
@@ -800,7 +800,7 @@
       "website": "https://github.com/bkrucarci/turk-adlist",
       "entries_text": "1,214 entries",
       "entries": 1214,
-      "updated_text": "Updated 959 days ago",
+      "updated_text": "Updated 960 days ago",
       "updated_ts": 1701450907.0,
       "popularity": 11
     },
@@ -811,7 +811,7 @@
       "website": "https://energized.pro",
       "entries_text": "0 entries",
       "entries": 0,
-      "updated_text": "Updated 189 days ago",
+      "updated_text": "Updated 190 days ago",
       "updated_ts": 1767951914.0,
       "popularity": 10
     },
@@ -822,7 +822,7 @@
       "website": "https://github.com/jdlingyu/ad-wars",
       "entries_text": "1,646 entries",
       "entries": 1646,
-      "updated_text": "Updated 973 days ago",
+      "updated_text": "Updated 974 days ago",
       "updated_ts": 1700202616.0,
       "popularity": 9
     },
@@ -833,7 +833,7 @@
       "website": "https://github.com/hufilter/hufilter",
       "entries_text": "94 entries",
       "entries": 94,
-      "updated_text": "Updated 59 days ago",
+      "updated_text": "Updated 60 days ago",
       "updated_ts": 1779183083.0,
       "popularity": 8
     },
@@ -844,7 +844,7 @@
       "website": "https://github.com/jmdugan/blocklists",
       "entries_text": "2,117 entries",
       "entries": 2117,
-      "updated_text": "Updated 624 days ago",
+      "updated_text": "Updated 625 days ago",
       "updated_ts": 1730404856.0,
       "popularity": 7
     },
@@ -855,7 +855,7 @@
       "website": "https://energized.pro",
       "entries_text": "0 entries",
       "entries": 0,
-      "updated_text": "Updated 189 days ago",
+      "updated_text": "Updated 190 days ago",
       "updated_ts": 1767952840.0,
       "popularity": 6
     },
@@ -866,20 +866,9 @@
       "website": "https://github.com/EasyList-Lithuania/easylist_lithuania",
       "entries_text": "32 entries",
       "entries": 32,
-      "updated_text": "Updated 29 days ago",
+      "updated_text": "Updated 30 days ago",
       "updated_ts": 1781825434.0,
       "popularity": 5
-    },
-    {
-      "id": "bulgarian-list",
-      "name": "Bulgarian list",
-      "description": "Bulgarian list is an affiliated filter list written by Alex that specifically removes adverts on Bulgarian language websites.",
-      "website": "https://easylist.to/pages/other-supplementary-filter-lists-and-easylist-variants.html",
-      "entries_text": "1 entries",
-      "entries": 1,
-      "updated_text": "Updated 184 days ago",
-      "updated_ts": 1768407355.0,
-      "popularity": 4
     },
     {
       "id": "yhosts",
@@ -888,8 +877,19 @@
       "website": "https://github.com/VeleSila/yhosts",
       "entries_text": "6,422 entries",
       "entries": 6422,
-      "updated_text": "Updated 1278 days ago",
+      "updated_text": "Updated 1279 days ago",
       "updated_ts": 1673914596.0,
+      "popularity": 4
+    },
+    {
+      "id": "bulgarian-list",
+      "name": "Bulgarian list",
+      "description": "Bulgarian list is an affiliated filter list written by Alex that specifically removes adverts on Bulgarian language websites.",
+      "website": "https://easylist.to/pages/other-supplementary-filter-lists-and-easylist-variants.html",
+      "entries_text": "1 entries",
+      "entries": 1,
+      "updated_text": "Updated 185 days ago",
+      "updated_ts": 1768407355.0,
       "popularity": 3
     },
     {
@@ -899,7 +899,7 @@
       "website": "https://notabug.org/latvian-list/adblock-latvian",
       "entries_text": "52 entries",
       "entries": 52,
-      "updated_text": "Updated 731 days ago",
+      "updated_text": "Updated 732 days ago",
       "updated_ts": 1721133974.0,
       "popularity": 2
     },
@@ -910,7 +910,7 @@
       "website": "https://github.com/nickspaargaren/no-google",
       "entries_text": "1,074 entries",
       "entries": 1074,
-      "updated_text": "Updated 10 days ago",
+      "updated_text": "Updated 11 days ago",
       "updated_ts": 1783427457.0,
       "popularity": 1
     }
@@ -929,24 +929,24 @@
       "name": "Instagram"
     },
     {
-      "id": "snapchat",
-      "name": "Snapchat"
-    },
-    {
       "id": "facebook",
       "name": "Facebook"
+    },
+    {
+      "id": "snapchat",
+      "name": "Snapchat"
     },
     {
       "id": "twitter",
       "name": "Twitter"
     },
     {
-      "id": "reddit",
-      "name": "Reddit"
-    },
-    {
       "id": "youtube",
       "name": "YouTube"
+    },
+    {
+      "id": "reddit",
+      "name": "Reddit"
     },
     {
       "id": "roblox",
@@ -957,12 +957,12 @@
       "name": "VK"
     },
     {
-      "id": "tumblr",
-      "name": "Tumblr"
-    },
-    {
       "id": "telegram",
       "name": "Telegram"
+    },
+    {
+      "id": "tumblr",
+      "name": "Tumblr"
     },
     {
       "id": "9gag",
@@ -977,16 +977,16 @@
       "name": "Fortnite"
     },
     {
+      "id": "messenger",
+      "name": "Messenger"
+    },
+    {
       "id": "discord",
       "name": "Discord"
     },
     {
       "id": "leagueoflegends",
       "name": "League of Legends"
-    },
-    {
-      "id": "messenger",
-      "name": "Messenger"
     },
     {
       "id": "dailymotion",
@@ -1029,12 +1029,16 @@
       "name": "Netflix"
     },
     {
+      "id": "steam",
+      "name": "Steam"
+    },
+    {
       "id": "mastodon",
       "name": "Mastodon"
     },
     {
-      "id": "steam",
-      "name": "Steam"
+      "id": "whatsapp",
+      "name": "WhatsApp"
     },
     {
       "id": "skype",
@@ -1045,16 +1049,12 @@
       "name": "PlayStation Network"
     },
     {
-      "id": "disneyplus",
-      "name": "Disney+"
-    },
-    {
-      "id": "whatsapp",
-      "name": "WhatsApp"
-    },
-    {
       "id": "primevideo",
       "name": "Prime Video"
+    },
+    {
+      "id": "disneyplus",
+      "name": "Disney+"
     },
     {
       "id": "hbomax",

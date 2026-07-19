@@ -13,24 +13,24 @@
       "website": "https://www.instagram.com"
     },
     {
-      "id": "snapchat",
-      "website": "https://www.snapchat.com"
-    },
-    {
       "id": "facebook",
       "website": "https://www.facebook.com"
+    },
+    {
+      "id": "snapchat",
+      "website": "https://www.snapchat.com"
     },
     {
       "id": "twitter",
       "website": "https://twitter.com"
     },
     {
-      "id": "reddit",
-      "website": "https://www.reddit.com"
-    },
-    {
       "id": "youtube",
       "website": "https://www.youtube.com"
+    },
+    {
+      "id": "reddit",
+      "website": "https://www.reddit.com"
     },
     {
       "id": "roblox",
@@ -41,12 +41,12 @@
       "website": "https://vk.com"
     },
     {
-      "id": "tumblr",
-      "website": "https://www.tumblr.com"
-    },
-    {
       "id": "telegram",
       "website": "https://telegram.org"
+    },
+    {
+      "id": "tumblr",
+      "website": "https://www.tumblr.com"
     },
     {
       "id": "9gag",
@@ -61,16 +61,16 @@
       "website": "https://www.epicgames.com/fortnite/home"
     },
     {
+      "id": "messenger",
+      "website": "https://www.messenger.com"
+    },
+    {
       "id": "discord",
       "website": "https://discordapp.com"
     },
     {
       "id": "leagueoflegends",
       "website": "https://www.leagueoflegends.com"
-    },
-    {
-      "id": "messenger",
-      "website": "https://www.messenger.com"
     },
     {
       "id": "dailymotion",
@@ -113,12 +113,16 @@
       "website": "https://www.netflix.com"
     },
     {
+      "id": "steam",
+      "website": "https://store.steampowered.com"
+    },
+    {
       "id": "mastodon",
       "website": "https://joinmastodon.org"
     },
     {
-      "id": "steam",
-      "website": "https://store.steampowered.com"
+      "id": "whatsapp",
+      "website": "https://www.whatsapp.com"
     },
     {
       "id": "skype",
@@ -129,16 +133,12 @@
       "website": "https://www.playstation.com/en-us/playstation-network"
     },
     {
-      "id": "disneyplus",
-      "website": "https://www.disneyplus.com"
-    },
-    {
-      "id": "whatsapp",
-      "website": "https://www.whatsapp.com"
-    },
-    {
       "id": "primevideo",
       "website": "https://www.primevideo.com"
+    },
+    {
+      "id": "disneyplus",
+      "website": "https://www.disneyplus.com"
     },
     {
       "id": "hbomax",
